@@ -54,12 +54,12 @@ The directory structure should be:
    - Predicts whether it is a **cat** or a **dog**  
    - Displays the image with the predicted label using `matplotlib`
   
-- ** Company**: CodTech IT Solutions  
-- ** Name**: Jayant Sirurmath  
-- ** Intern ID**: CT08DL564  
-- ** Domain**: Data Science  
-- ** Duration**: 8 Weeks  
-- ** Mentor**: Neela Santosh 
+-  Company: CodTech IT Solutions  
+-  Name: Jayant Sirurmath  
+-  Intern ID: CT08DL564  
+-  Domain: Data Science  
+-  Duration: 8 Weeks  
+-  Mentor: Neela Santosh 
 
 ---
 
