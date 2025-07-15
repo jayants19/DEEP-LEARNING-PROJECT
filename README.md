@@ -1,54 +1,61 @@
 # DEEP-LEARNING-PROJECT
 
-🐶🐱 Image Classification with CNN (PyTorch)
-This project demonstrates how to build, train, and evaluate a simple Convolutional Neural Network (CNN) to classify images of cats and dogs using PyTorch.
+# 🐶🐱 Image Classification using CNN in PyTorch
 
-🛠️ Technologies Used
-Python 3
+This project performs binary image classification (cats vs dogs) using a custom **Convolutional Neural Network (CNN)** built with **PyTorch**.
 
-PyTorch & TorchVision
+---
 
-PIL (Python Imaging Library)
+## 🎯 Objective
 
-Matplotlib (for visualization)
+Train a CNN model to:
 
-🧠 Model Architecture
-A custom CNN model with:
+- Classify input images as either **cat** or **dog**  
+- Evaluate performance using validation data  
+- Predict on unseen test images using the saved model
 
-Two Conv2d layers + ReLU + MaxPooling
+---
 
-One Flatten layer
+## 📁 Input Data
 
-Two Linear layers (fully connected)
+Input is read from a folder named: `dataset/`
 
-Final output: 2 classes (cat, dog)
-🔄 Workflow Summary
-Preprocessing
+The directory structure should be:
 
-Images resized to 128×128
 
-Transformed to tensors
+- `train/` is used to train the model   
+- Images are resized to **128×128 pixels** during preprocessing
 
-Random horizontal flip added to training data for augmentation
+---
 
-Training
+## 🧠 What This Project Does
 
-Loss function: CrossEntropyLoss
+1. **Preprocesses the Image Data**  
+   - Resizes all images to 128×128  
+   - Applies `ToTensor()` to convert images to tensors  
+   - Adds data augmentation with `RandomHorizontalFlip()` for training images
 
-Optimizer: Adam
+2. **Builds a Simple CNN Model**  
+   - 2 convolutional layers with ReLU and MaxPooling  
+   - 2 fully connected layers  
+   - Final output layer with 2 units (cat or dog)
 
-Trained for 5 epochs
+3. **Trains the Model**  
+   - Optimizer: `Adam`  
+   - Loss Function: `CrossEntropyLoss`  
+   - Trains for 5 epochs  
+   - Prints accuracy and loss for both train and val after each epoch
 
-Accuracy and loss reported for both train and validation sets
+4. **Saves the Model**  
+   - After training, the model is saved as `simple_cnn.pth`
 
-Saving the Model
+5. **Runs Inference on a Test Image**  
+   - Reads `test.jpg` from the current folder  
+   - Predicts whether it is a **cat** or a **dog**  
+   - Displays the image with the predicted label using `matplotlib`
 
-Trained model saved as: simple_cnn.pth
+---
 
-Inference
+## 📦 Output
 
-Loads test.jpg from root directory
 
-Predicts whether the image is a cat or dog
-
-Displays result using matplotlib
