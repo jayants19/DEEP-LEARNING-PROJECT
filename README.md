@@ -56,6 +56,6 @@ The directory structure should be:
 
 ---
 
-## 📦 Output
+
 
 
